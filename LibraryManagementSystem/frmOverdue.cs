@@ -29,7 +29,7 @@ namespace LibraryManagementSystem
 
         private void txtSearchPborrower_TextChanged(object sender, EventArgs e)
         {
-            crud.sql = "SELECT br.`BorrowerId`, `BookTitle`,`DateBorrowed`, `Purpose`, `DueDate` , BorrowId,br.AccessionNo " + " FROM `tblborrow` br,`tblbooks` b,`tblborrower` bw  " + " WHERE br.AccessionNo=b.AccessionNo AND br.`BorrowerId`=bw.`BorrowerId` AND br.Status='Borrowed' AND Due=1 AND   br.`BorrowerId` Like '%" + txtSearchPborrower.Text + "%'";
+            crud.sql = "SELECT br.`BorrowerId`, `BookTitle`,`DateBorrowed`, `Purpose`, `DueDate` , BorrowId,br.AccessionNo " + " FROM `tblborrow` br,`tblbooks` b,`tblborrower` bw " + " WHERE br.AccessionNo=b.AccessionNo AND br.`BorrowerId`=bw.`BorrowerId` AND br.Status='Borrowed' AND DueDate > '" + DateTime.Now + "' AND br.`BorrowerId` Like '%" + txtSearchPborrower.Text + "%'";
             crud.reloadDtg(crud.sql, dtgPenalties);
             dtgPenalties.Columns[5].Visible = false;
             dtgPenalties.Columns[6].Visible = false;
