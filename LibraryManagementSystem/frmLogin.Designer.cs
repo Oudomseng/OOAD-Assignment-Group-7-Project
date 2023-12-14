@@ -151,6 +151,7 @@ namespace LibraryManagementSystem
             // 
             this.Button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(50)))), ((int)(((byte)(95)))));
             this.Button2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Button2.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Button2.ForeColor = System.Drawing.Color.White;
@@ -192,9 +193,11 @@ namespace LibraryManagementSystem
             // 
             // frmLogin
             // 
+            this.AcceptButton = this.Button1;
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(50)))), ((int)(((byte)(95)))));
+            this.CancelButton = this.Button2;
             this.ClientSize = new System.Drawing.Size(579, 695);
             this.Controls.Add(this.Panel2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
